@@ -17,9 +17,7 @@ class CreateUserController {
         admin: user.admin,
       });
     } catch (err) {
-      return response
-        .status(400)
-        .json({ error: 'A user with this id does not exist!' });
+      return response.status(400).json({ error: err.message });
     }
   }
 }

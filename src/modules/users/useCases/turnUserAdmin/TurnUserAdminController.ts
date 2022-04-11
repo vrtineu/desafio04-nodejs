@@ -17,9 +17,7 @@ class TurnUserAdminController {
         admin: user.admin,
       });
     } catch (err) {
-      return response
-        .status(404)
-        .json({ error: 'A user with this id does not exist!' });
+      return response.status(404).json({ error: err.message });
     }
   }
 }
